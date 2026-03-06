@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: carmen-in-china-log
+    runtime: static
+    branch: main
+    buildCommand: echo "No build step"
+    staticPublishPath: .

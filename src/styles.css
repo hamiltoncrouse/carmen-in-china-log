@@ -1,0 +1,105 @@
+:root{
+  --bg:#070a10;
+  --panel: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.12);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.70);
+  --radius: 18px;
+  --shadow: 0 16px 60px rgba(0,0,0,.55);
+  --max: 720px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(800px 400px at 20% 0%, rgba(255,128,90,.18), transparent 60%),
+    radial-gradient(900px 500px at 80% -10%, rgba(80,180,255,.18), transparent 60%),
+    var(--bg);
+  color: var(--text);
+}
+
+.wrap{max-width: var(--max); margin:0 auto; padding: 0 16px}
+
+.top{
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: blur(14px);
+  background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.10));
+  border-bottom: 1px solid var(--border);
+}
+
+.brand{display:flex; align-items:center; gap:12px; padding: 14px 0}
+.mark{
+  width: 40px; height: 40px;
+  border-radius: 16px;
+  display:grid; place-items:center;
+  background: linear-gradient(135deg, rgba(80,180,255,.95), rgba(255,128,90,.85));
+  color: rgba(0,0,0,.85);
+  font-weight: 900;
+  box-shadow: var(--shadow);
+}
+.title{font-weight: 900; letter-spacing: -0.01em}
+.sub{opacity:.75; font-size: .92rem}
+
+.hero{padding: 18px 0 10px}
+.collage{
+  width:100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.muted{color: var(--muted)}
+
+.carousel{padding: 12px 0 18px}
+
+.rail{
+  display:flex;
+  gap: 12px;
+  overflow:auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+.card{
+  flex: 0 0 88%;
+  scroll-snap-align: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+  overflow:hidden;
+  box-shadow: var(--shadow);
+}
+
+.card img{
+  display:block;
+  width:100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.cap{padding: 12px 12px 14px}
+.h{font-weight: 900; letter-spacing: -0.01em}
+.p{margin-top: 6px; color: var(--muted); line-height: 1.55}
+
+.dots{display:flex; justify-content:center; gap: 10px; padding-top: 6px}
+.dot{
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.22);
+}
+.dot[aria-current="true"]{background: rgba(255,255,255,.85)}
+
+.footer{padding: 10px 0 40px}
+.tiny{font-size:.92rem; color: var(--muted); margin:0; line-height: 1.5}
+
+@media (min-width: 740px){
+  .card{flex-basis: 45%}
+  .card img{height: 320px}
+}

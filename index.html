@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Carmen in China — Travel Log</title>
+  <meta name="description" content="A mobile-first travel log page." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles.css" />
+  <script defer src="./src/app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">✈︎</div>
+        <div>
+          <div class="title">Carmen in China</div>
+          <div class="sub">A tiny mobile travel log</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <img class="collage" src="./assets/travel-log-collage.png" alt="Carmen in China travel log collage" />
+      <p class="muted">Swipe the moments below.</p>
+    </section>
+
+    <section class="carousel" aria-label="Trip moments">
+      <div class="rail" id="rail">
+        <article class="card" id="s1">
+          <img src="./assets/01-neon-streets.png" alt="Neon streets in China" loading="lazy" />
+          <div class="cap">
+            <div class="h">Neon Streets</div>
+            <div class="p">Late-night city lights and a little cinematic chaos.</div>
+          </div>
+        </article>
+
+        <article class="card" id="s2">
+          <img src="./assets/02-great-wall.png" alt="On the Great Wall of China" loading="lazy" />
+          <div class="cap">
+            <div class="h">Great Wall</div>
+            <div class="p">Golden hour views that don’t feel real.</div>
+          </div>
+        </article>
+
+        <article class="card" id="s3">
+          <img src="./assets/03-night-market.png" alt="At a night market in China" loading="lazy" />
+          <div class="cap">
+            <div class="h">Night Market</div>
+            <div class="p">Steam, lanterns, skewers — the best kind of crowd.</div>
+          </div>
+        </article>
+
+        <article class="card" id="s4">
+          <img src="./assets/04-temple.png" alt="Temple courtyard in China" loading="lazy" />
+          <div class="cap">
+            <div class="h">Temple Courtyard</div>
+            <div class="p">Quiet moments between the busy ones.</div>
+          </div>
+        </article>
+      </div>
+
+      <div class="dots" aria-label="Slide controls">
+        <button class="dot" data-to="s1" aria-label="Go to Neon Streets" aria-current="true"></button>
+        <button class="dot" data-to="s2" aria-label="Go to Great Wall"></button>
+        <button class="dot" data-to="s3" aria-label="Go to Night Market"></button>
+        <button class="dot" data-to="s4" aria-label="Go to Temple Courtyard"></button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="tiny">Made for mobile. Tap a dot to jump; swipe to browse.</p>
+    </footer>
+  </main>
+</body>
+</html>
